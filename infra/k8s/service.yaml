@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d-srv
+spec:
+  selector:
+    app: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9015
+  type: ClusterIP

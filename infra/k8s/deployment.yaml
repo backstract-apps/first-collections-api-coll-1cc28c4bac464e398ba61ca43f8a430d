@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d-depl
+  labels:
+    app: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d
+  template:
+    metadata:
+      labels:
+        app: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d
+    spec:
+      containers:
+        - name: first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:first-collections-api-coll-1cc28c4bac464e398ba61ca43f8a430d
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9015
